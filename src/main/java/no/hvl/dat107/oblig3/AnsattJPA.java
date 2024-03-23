@@ -8,7 +8,7 @@ import jakarta.persistence.TypedQuery;
 import java.util.List;
 import java.util.Map;
 
-public class AnsattJPA {
+public class AnsattJPA implements AnsattRepo{
 
     private EntityManagerFactory emf;
 
