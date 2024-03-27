@@ -1,4 +1,4 @@
-package org.example.oblig3;
+package no.hvl.dat107.oblig3;
 
 import java.io.*;
 import jakarta.servlet.http.*;

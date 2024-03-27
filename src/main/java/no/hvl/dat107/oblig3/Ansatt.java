@@ -1,7 +1,6 @@
 package no.hvl.dat107.oblig3;
 
 import jakarta.persistence.*;
-
 import java.sql.Date;
 
 @Entity
@@ -10,7 +9,7 @@ public class Ansatt {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer ansattid;
 
     @Column
     //Unqiue
@@ -97,7 +96,7 @@ public class Ansatt {
     @Override
     public String toString() {
         return "Ansatt{" +
-                "id=" + id +
+                "id=" + ansattid +
                 ", brukernavn='" + brukernavn + '\'' +
                 ", fornavn='" + fornavn + '\'' +
                 ", etternavn='" + etternavn + '\'' +

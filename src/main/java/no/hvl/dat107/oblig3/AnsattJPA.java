@@ -14,7 +14,7 @@ public class AnsattJPA implements AnsattRepo{
 
     public AnsattJPA(){
 
-        emf = Persistence.createEntityManagerFactory("defualt");
+        emf = Persistence.createEntityManagerFactory("default");
     }
 
     @Override
@@ -22,8 +22,7 @@ public class AnsattJPA implements AnsattRepo{
 
         EntityManager em = emf.createEntityManager();
 
-        String jpqlQuery = "select p from Ansatt p order by p.id";
-
+        String jpqlQuery = "select a from Ansatt a";
 
         try{
 
