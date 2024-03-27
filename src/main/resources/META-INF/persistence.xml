@@ -12,29 +12,24 @@
     <properties>
       <!-- Generelle Properties -->
 
-
+      <!-- Database connection settings (HVL) -->
       <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-
       <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://129.151.221.119:5432/587726"/>
       <property name="jakarta.persistence.jdbc.user" value="587726"/>
       <property name="jakarta.persistence.jdbc.password" value="Ha1FinDagIDag!"/>
 
-
-
-        <!-- Database connection settings -->
-      <!--
+        <!-- Database connection settings (LOCAL) -->
+        <!--
         <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
         <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres" />
         <property name="javax.persistence.jdbc.user" value="postgres" />
         <property name="javax.persistence.jdbc.password" value="pass" />
-              -->
+         -->
 
         <!-- Other Hibernate properties -->
         <!-- <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>-->
       <property name="eclipselink.logging.level" value="WARNING"/>
-
       
     </properties>
-
   </persistence-unit>
 </persistence>
