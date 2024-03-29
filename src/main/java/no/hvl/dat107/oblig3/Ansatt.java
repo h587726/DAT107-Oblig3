@@ -33,6 +33,18 @@ public class Ansatt {
     @Column
     private Integer avdeling;
 
+    public Ansatt(String brukernavn, String fornavn, String etternavn,
+                  Date ansettelse, String stilling, int manedslonn, int avdeling){
+
+        this.brukernavn = brukernavn;
+        this.fornavn = fornavn;
+        this.etternavn = etternavn;
+        this.ansettelse = ansettelse;
+        this.stilling = stilling;
+        this.manedslonn = manedslonn;
+        this.avdeling = avdeling;
+    }
+
     public Ansatt(){
 
     }
