@@ -1,6 +1,4 @@
-import no.hvl.dat107.oblig3.Ansatt;
-import no.hvl.dat107.oblig3.AnsattDAO;
-import no.hvl.dat107.oblig3.AnsattRepo;
+import no.hvl.dat107.oblig3.*;
 
 import java.sql.Date;
 import java.util.List;
@@ -8,6 +6,7 @@ import java.util.List;
 public class Main {
 
     private static AnsattRepo ansattRepo = new AnsattDAO();
+    private static AvdelingRepo avdelingRepo = new AvdelingDAO();
     public static void main(String[] args) {
 
         //ITERATIVE 2
@@ -48,7 +47,10 @@ public class Main {
 
         //ITERATIVE 3
 
-
+        //Finn avdeling med Id
+        System.out.println("Finn avdeling med id");
+        System.out.println(avdelingRepo.finnAvdelingMedId(1));
+        System.out.println("....");
     }
     private static void skrivUt() {
 

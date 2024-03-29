@@ -30,11 +30,13 @@ public class Ansatt {
     @Column
     private Integer manedslonn;
 
-    @Column
-    private Integer avdeling;
+    //@Column
+    @ManyToOne
+    @JoinColumn(name = "avdeling", referencedColumnName = "avdelingid")
+    private Avdeling avdeling;
 
     public Ansatt(String brukernavn, String fornavn, String etternavn,
-                  Date ansettelse, String stilling, int manedslonn, int avdeling){
+                  Date ansettelse, String stilling, int manedslonn, Avdeling avdeling){
 
         this.brukernavn = brukernavn;
         this.fornavn = fornavn;
@@ -97,11 +99,11 @@ public class Ansatt {
         this.manedslonn = manedslonn;
     }
 
-    public Integer getAvdeling() {
+    public Avdeling getAvdeling() {
         return avdeling;
     }
 
-    public void setAvdeling(Integer avdeling) {
+    public void setAvdeling(Avdeling avdeling) {
         this.avdeling = avdeling;
     }
 
@@ -112,10 +114,7 @@ public class Ansatt {
                 ", brukernavn='" + brukernavn + '\'' +
                 ", fornavn='" + fornavn + '\'' +
                 ", etternavn='" + etternavn + '\'' +
-                ", ansettelse=" + ansettelse +
                 ", stilling='" + stilling + '\'' +
-                ", manedslonn=" + manedslonn +
-                ", avdeling=" + avdeling +
                 '}';
     }
 }
