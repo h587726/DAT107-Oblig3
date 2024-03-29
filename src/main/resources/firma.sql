@@ -24,6 +24,8 @@ CREATE TABLE avdeling(
                          CONSTRAINT avdelingsSjef_FK FOREIGN KEY (avdelingsSjef) REFERENCES ansatt(ansattId)
 );
 
+ALTER TABLE ansatt add FOREIGN KEY (avdeling) references avdeling(avdelingid);
+
 CREATE TABLE prosjekt(
 
                          prosjektId SERIAL PRIMARY KEY,
@@ -43,6 +45,11 @@ CREATE TABLE prosjektDeltakelse(
                                    CONSTRAINT ansattId_FK FOREIGN KEY (ansattId) REFERENCES ansatt(ansattId)
 );
 
+INSERT INTO avdeling(avdelingId , avdelingsNavn)
+VALUES(DEFAULT, 'IT'),
+      (DEFAULT, 'Legal'),
+      (DEFAULT, 'Customer Support');
+
 INSERT INTO ansatt(ansattId, brukernavn, fornavn, etternavn, ansettelse, stilling, manedslonn, avdeling)
 VALUES(DEFAULT, 'OlNo', 'Ola', 'Nordmann', '2022-05-01', 'Software Developer', 650000, 1),
       (DEFAULT, 'ArPe', 'Arne', 'Persen', '2015-01-01', 'Lead Developer', 1000000, 1),
@@ -51,11 +58,6 @@ VALUES(DEFAULT, 'OlNo', 'Ola', 'Nordmann', '2022-05-01', 'Software Developer', 6
       (DEFAULT, 'RoLa', 'Roger', 'Larsen', '2018-03-05', 'Lead Lawyer', 1000000 , 2),
       (DEFAULT, 'ReBe', 'Reidun', 'Berntsen', '2015-01-01', 'Team Lead', 520000, 3),
       (DEFAULT, 'HeDa', 'Henrik', 'Dale', '2022-05-01', 'Customer Support Specialist', 450000, 3);
-
-INSERT INTO avdeling(avdelingId ,avdelingsNavn, avdelingsSjef)
-VALUES(DEFAULT, 'IT', 1),
-      (DEFAULT, 'Legal', 5),
-      (DEFAULT, 'Customer Support', 6);
 
 INSERT INTO prosjekt(prosjektId ,prosjektNavn , beskrivelse)
 VALUES(DEFAULT, 'Mobile Application', 'Making a mobile application for our firm'),
@@ -74,3 +76,15 @@ VALUES(DEFAULT, 'Lead Developer', 250, 1, 2),
       (DEFAULT, 'Developer', 350 ,4, 1),
       (DEFAULT, 'Developer', 300 ,4, 4),
       (DEFAULT, 'Lead Developer', 100, 4, 2);
+
+UPDATE avdeling
+set avdelingssjef = 2
+where avdelingid = 1;
+
+UPDATE avdeling
+set avdelingssjef = 5
+where avdelingid = 2;
+
+UPDATE avdeling
+set avdelingssjef = 7
+where avdelingid = 3;

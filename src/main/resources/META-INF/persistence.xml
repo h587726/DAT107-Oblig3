@@ -8,6 +8,8 @@
 
     <class>no.hvl.dat107.oblig3.Ansatt</class>
     <class>no.hvl.dat107.oblig3.AnsattDAO</class>
+    <class>no.hvl.dat107.oblig3.Avdeling</class>
+    <class>no.hvl.dat107.oblig3.AvdelingDAO</class>
 
     <properties>
       <!-- Generelle Properties -->
