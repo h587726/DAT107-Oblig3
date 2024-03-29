@@ -7,7 +7,7 @@
   <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
 
     <class>no.hvl.dat107.oblig3.Ansatt</class>
-    <class>no.hvl.dat107.oblig3.AnsattJPA</class>
+    <class>no.hvl.dat107.oblig3.AnsattDAO</class>
 
     <properties>
       <!-- Generelle Properties -->
