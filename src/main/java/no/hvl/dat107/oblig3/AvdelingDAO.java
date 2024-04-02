@@ -76,7 +76,6 @@ public class AvdelingDAO implements AvdelingRepo{
             if(ansatt.erSjef(ansatt)){
 
                 System.out.println("Kan ikke oppdatere avdeling for sjef");
-                //em.close();
             }else {
 
                 ansatt.setAvdeling(avdeling);

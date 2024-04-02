@@ -19,9 +19,7 @@ public class Avdeling {
     @JoinColumn(name = "avdelingssjef", referencedColumnName = "ansattid")
     private Ansatt avdelingssjef;
 
-    public Avdeling(){
-
-    }
+    public Avdeling(){}
 
     public int getAvdelingid() {
         return avdelingid;
