@@ -86,5 +86,5 @@ set avdelingssjef = 5
 where avdelingid = 2;
 
 UPDATE avdeling
-set avdelingssjef = 7
+set avdelingssjef = 6
 where avdelingid = 3;
