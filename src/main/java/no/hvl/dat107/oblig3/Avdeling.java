@@ -1,5 +1,6 @@
 package no.hvl.dat107.oblig3;
 
+import com.sun.codemodel.JForEach;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,18 +14,17 @@ public class Avdeling {
     @Column
     private String avdelingsnavn;
 
-
     //@Column
     @OneToOne(orphanRemoval = true)
     @JoinColumn(name = "avdelingssjef", referencedColumnName = "ansattid")
     private Ansatt avdelingssjef;
 
-    public int getAvdelingid() {
-        return avdelingid;
+    public Avdeling(){
+
     }
 
-    public void setAvdelingid(int avdelingid) {
-        this.avdelingid = avdelingid;
+    public int getAvdelingid() {
+        return avdelingid;
     }
 
     public String getAvdelingsnavn() {
@@ -48,7 +48,7 @@ public class Avdeling {
         return "Avdeling{" +
                 "avdelingid=" + avdelingid +
                 ", avdelingsnavn='" + avdelingsnavn + '\'' +
-                ", avdelingssjef=" + avdelingssjef +
+                ", avdelingssjef=" + avdelingssjef.getBrukernavn() +
                 '}';
     }
 }

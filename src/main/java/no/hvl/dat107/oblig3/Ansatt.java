@@ -51,6 +51,10 @@ public class Ansatt {
 
     }
 
+    public Integer getAnsattid() {
+        return ansattid;
+    }
+
     public String getBrukernavn() {
         return brukernavn;
     }
@@ -107,6 +111,11 @@ public class Ansatt {
         this.avdeling = avdeling;
     }
 
+    public boolean erSjef(Ansatt ansatt){
+
+        return ansatt == ansatt.getAvdeling().getAvdelingssjef();
+    }
+
     @Override
     public String toString() {
         return "Ansatt{" +
@@ -115,6 +124,7 @@ public class Ansatt {
                 ", fornavn='" + fornavn + '\'' +
                 ", etternavn='" + etternavn + '\'' +
                 ", stilling='" + stilling + '\'' +
+                ", avdeling'" + avdeling.getAvdelingsnavn() + '\'' +
                 '}';
     }
 }

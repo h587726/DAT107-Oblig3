@@ -45,17 +45,47 @@ public class Main {
         System.out.println("....");
         */
 
+        /*
         //ITERATIVE 3
 
         //Finn avdeling med Id
         System.out.println("Finn avdeling med id");
         System.out.println(avdelingRepo.finnAvdelingMedId(1));
         System.out.println("....");
+         */
+
+        //ITERATIVE 4
+        /*
+        //Finn avdeling med Id
+        System.out.println("Finn avdeling med id");
+        System.out.println(avdelingRepo.finnAvdelingMedId(1));
+        System.out.println("....");
+
+        //List ut ansatte på en avdeling, inkl. hvem som er sjef
+        System.out.println("List ansatte på avdeling og sjefen");
+        System.out.println(avdelingRepo.hentAnsattePaaAvdeling(1));
+        System.out.println("....");
+
+        //Oppdater ansatt sin avdeling
+        System.out.println("Oppdatere ansatt sin avdeling");
+        System.out.println(ansattRepo.hentAnsattMedId(1));
+        System.out.println("Oppdaterer til Customer Support...");
+        avdelingRepo.oppdaterAvdelingForAnsatt(1, 3);
+        System.out.println(ansattRepo.hentAnsattMedId(1));
+        System.out.println("....");
+
+        //Legg til ny avdeling
+        System.out.println("Legg til ny avdeling");
+        skrivUt();
+        avdelingRepo.leggTilAvdeling("Backoffice", 7);
+        skrivUt();
+        System.out.println("....");
+         */
     }
     private static void skrivUt() {
 
-        List<Ansatt> ansatte = ansattRepo.hentAnsatte();
+        List<Avdeling> avdelinger = avdelingRepo.hentAlleAvdelinger();
 
-        ansatte.forEach(System.out::println);
+        avdelinger.forEach(System.out::println);
     }
 }
