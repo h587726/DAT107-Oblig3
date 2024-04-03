@@ -16,3 +16,9 @@ ITERATIVE 3:
 ITERATIVE 4:
 
 ![image](https://github.com/h587726/DAT107-Oblig3/assets/54097862/d464f03c-8d40-4d89-abbd-552c89fe1b14)
+
+ITERATIVE 5:
+
+![image](https://github.com/h587726/DAT107-Oblig3/assets/54097862/e014143c-dcc7-4039-a94a-e97ba4320de6)
+
+![image](https://github.com/h587726/DAT107-Oblig3/assets/54097862/4ca4802f-abab-48b1-b2d8-785c2cd739e7)
