@@ -6,10 +6,10 @@
 
   <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
 
-    <class>no.hvl.dat107.oblig3.Ansatt</class>
-    <class>no.hvl.dat107.oblig3.AnsattDAO</class>
-    <class>no.hvl.dat107.oblig3.Avdeling</class>
-    <class>no.hvl.dat107.oblig3.AvdelingDAO</class>
+    <class>no.hvl.dat107.oblig3.model.Ansatt</class>
+    <class>no.hvl.dat107.oblig3.dao.AnsattDAO</class>
+    <class>no.hvl.dat107.oblig3.model.Avdeling</class>
+    <class>no.hvl.dat107.oblig3.dao.AvdelingDAO</class>
 
     <properties>
       <!-- Generelle Properties -->
