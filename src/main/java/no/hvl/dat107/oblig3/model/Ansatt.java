@@ -1,4 +1,4 @@
-package no.hvl.dat107.oblig3;
+package no.hvl.dat107.oblig3.model;
 
 import jakarta.persistence.*;
 import java.sql.Date;

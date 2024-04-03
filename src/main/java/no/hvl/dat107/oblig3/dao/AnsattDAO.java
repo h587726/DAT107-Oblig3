@@ -1,10 +1,12 @@
-package no.hvl.dat107.oblig3;
+package no.hvl.dat107.oblig3.dao;
 
 import jakarta.persistence.*;
+import no.hvl.dat107.oblig3.service.AnsattRepo;
+import no.hvl.dat107.oblig3.model.Ansatt;
 
 import java.util.List;
 
-public class AnsattDAO implements AnsattRepo{
+public class AnsattDAO implements AnsattRepo {
 
     private EntityManagerFactory emf;
 

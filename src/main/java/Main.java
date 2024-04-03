@@ -1,12 +1,25 @@
-import no.hvl.dat107.oblig3.*;
+import no.hvl.dat107.oblig3.dao.AnsattDAO;
+import no.hvl.dat107.oblig3.dao.AvdelingDAO;
+import no.hvl.dat107.oblig3.dao.ProsjektDAO;
+import no.hvl.dat107.oblig3.dao.ProsjektdeltakelseDAO;
+import no.hvl.dat107.oblig3.model.Prosjekt;
+import no.hvl.dat107.oblig3.model.Prosjektdeltakelse;
+import no.hvl.dat107.oblig3.service.AnsattRepo;
+import no.hvl.dat107.oblig3.service.AvdelingRepo;
+import no.hvl.dat107.oblig3.service.ProsjektRepo;
+import no.hvl.dat107.oblig3.service.ProsjektdeltakelseRepo;
 
-import java.sql.Date;
 import java.util.List;
 
 public class Main {
 
     private static AnsattRepo ansattRepo = new AnsattDAO();
     private static AvdelingRepo avdelingRepo = new AvdelingDAO();
+
+    private static ProsjektRepo prosjektRepo = new ProsjektDAO();
+
+    private static ProsjektdeltakelseRepo prosjektdeltakelseRepo = new ProsjektdeltakelseDAO();
+
     public static void main(String[] args) {
 
         //ITERATIVE 2
@@ -81,11 +94,40 @@ public class Main {
         skrivUt();
         System.out.println("....");
          */
+
+        //ITERATIVE 5
+
+        //Legg til nytt prosjekt
+        /*
+        System.out.println("Legg til nytt prosjekt");
+        skrivUt();
+        prosjektRepo.leggTilProsjekt("Adding 2FA", "Adding 2FA to the website for security reasons");
+        skrivUt();
+        System.out.println("....");
+
+        //Registrere prosjektdeltakelse (ansatt med rolle i prosjekt)
+        System.out.println("Registrere prosjektdeltakelse");
+        skrivUt();
+        Prosjektdeltakelse prosjektdeltakelse = new Prosjektdeltakelse("User functionality", prosjektRepo.finnProsjektMedId(1), ansattRepo.hentAnsattMedId(7));
+        prosjektdeltakelseRepo.registrerProsjektdeltakelse(prosjektdeltakelse);
+        System.out.println("....");
+        skrivUt();
+        System.out.println("....");
+
+        //Legg til timer for prosjektdeltakelse
+        System.out.println("Legg til timer");
+        prosjektdeltakelseRepo.leggTilTimer(11, 12);
+        skrivUt();
+        System.out.println("....");
+
+        //Utskrift av info, om prosjekt, deltaker, og arbeidstimer totalt
+        System.out.println("Utskrift av info om prosjekt");
+        */
     }
     private static void skrivUt() {
 
-        List<Avdeling> avdelinger = avdelingRepo.hentAlleAvdelinger();
+        List<Prosjektdeltakelse> prosjekterdeltakelser = prosjektdeltakelseRepo.hentAlleProsjektdeltakelser();
 
-        avdelinger.forEach(System.out::println);
+        prosjekterdeltakelser.forEach(System.out::println);
     }
 }

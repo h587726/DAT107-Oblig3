@@ -1,11 +1,14 @@
-package no.hvl.dat107.oblig3;
+package no.hvl.dat107.oblig3.dao;
 
 import jakarta.persistence.*;
+import no.hvl.dat107.oblig3.service.AvdelingRepo;
+import no.hvl.dat107.oblig3.model.Ansatt;
+import no.hvl.dat107.oblig3.model.Avdeling;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AvdelingDAO implements AvdelingRepo{
+public class AvdelingDAO implements AvdelingRepo {
 
     private EntityManagerFactory emf;
 

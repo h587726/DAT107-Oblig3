@@ -1,4 +1,6 @@
-package no.hvl.dat107.oblig3;
+package no.hvl.dat107.oblig3.service;
+
+import no.hvl.dat107.oblig3.model.Avdeling;
 
 import java.util.List;
 

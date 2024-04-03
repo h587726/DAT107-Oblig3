@@ -1,6 +1,5 @@
-package no.hvl.dat107.oblig3;
+package no.hvl.dat107.oblig3.model;
 
-import com.sun.codemodel.JForEach;
 import jakarta.persistence.*;
 
 @Entity
